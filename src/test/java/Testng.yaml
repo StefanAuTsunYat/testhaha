@@ -1,0 +1,15 @@
+name: Suite
+configFailurePolicy: skip
+tests:
+  - name: ChromeTest
+  parallel: classes
+  parameters: { browser: Chrome }
+  classes:
+    - test.TestRun
+
+  - name: EdgeTest
+  parallel: classes
+  parameters: { browser: Edge }
+  classes:
+    - test.TestRun
+

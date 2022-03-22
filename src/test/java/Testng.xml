@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd"> -->
+<suite name="Suite">
+	<parameter name="headlessFlag" value="${headlessFlag}" />
+	<parameter name="jiraUploadFlag" value="${jiraUploadFlag}" />
+  <parameter name="userDataDir" value="${userDataDir}"/>
+
+	<test thread-count="2" parallel="classes" name="ChromeTest">
+		<parameter name="browser" value="Chrome" />
+		<classes >
+			<class name="test.TestRun" />
+		</classes>
+	</test>
+
+<!--	<test thread-count="2" parallel="classes" name="EdgeTest">-->
+<!--		<parameter name="browser" value="Edge" />-->
+<!--		<classes >-->
+<!--			<class name="test.TestRun" />-->
+<!--		</classes>-->
+<!--	</test> -->
+
+</suite> <!-- Suite -->
